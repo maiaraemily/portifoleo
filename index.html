@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio | Emily</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Fundo de bolinhas Animado -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="grid-overlay"></div>
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- Navegação -->
+  <header>
+    <div class="nav-container">
+      <a href="#sobre" class="logo">
+        <span class="logo-dot"></span>
+        <span><span class="highlight">DEV</span>.PORTFOLIO</span>
+      </a>
+
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="#sobre">01. Sobre</a></li>
+          <li><a href="#skills">02. Skills</a></li>
+          <li><a href="#projetos">03. Projetos</a></li>
+          <li><a href="#contato">04. Contato</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex; align-items:center; gap:0.75rem;">
+        <button class="menu-btn" id="menu-btn" aria-label="Abrir menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. INÍCIO / SOBRE MIM -->
+    <section id="sobre" class="hero">
+      <div class="hero-grid">
+        <div class="reveal">
+
+          <!-- PREENCHA AQUI: Seu Nome e Cargo -->
+          <h1>
+            Olá, eu sou<br>
+            <span class="gradient-text editable-slot" data-placeholder="Emily Maiara"></span>
+          </h1>
+
+          <div class="role-line">
+            <span>&gt;</span>
+            <span class="editable-slot" data-placeholder="Desenvolvedor Full-Stack"></span>
+          </div>
+
+          <!-- PREENCHA AQUI: Sua Apresentação Pessoal -->
+          <div class="about-box">
+            <div class="about-box-header">
+              <span>SOBRE MIM</span>
+            </div>
+            <div class="about-placeholder editable-slot" data-placeholder="Escreva aqui um pouco sobre você, sua trajetória, o que te motiva na tecnologia e o que você busca construir..."></div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projetos" class="btn btn-primary">Ver Projetos ↓</a>
+            <a href="#contato" class="btn btn-outline">Entrar em Contato</a>
+          </div>
+        </div>
+
+        <!-- COLOCAR UMA FOTO MINHA AQUI BEM BUBU -->
+        <div class="photo-card reveal" style="transition-delay: 0.15s;">
+        <div class="photo-frame">
+            <span class="corner tl"></span>
+            <span class="corner tr"></span>
+            <span class="corner bl"></span>
+            <span class="corner br"></span>
+            <img id="profile-img" src="emily.png" alt="Minha foto" />
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. HABILIDADES / STACK -->
+    <section id="skills">
+      <div class="section-header reveal">
+        <span class="section-tag"> ARSENAL TÉCNICO</span>
+        <h2 class="section-title">Tecnologias &amp; Habilidades</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <h3>Front-End</h3>
+          <div class="skill-tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="transition-delay: 0.1s;">
+          <h3>Back-End</h3>
+          <div class="skill-tags">
+            <span class="tag editable-slot" data-placeholder="PHP"></span>
+            <span class="tag editable-slot" data-placeholder="Python"></span>
+            <span class="tag editable-slot" data-placeholder="SQL"></span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="transition-delay: 0.2s;">
+          <h3>Ferramentas &amp; Outros</h3>
+          <div class="skill-tags">
+            <span class="tag">Git &amp; GitHub</span>
+            <span class="tag editable-slot" data-placeholder="Arduino"></span>
+            <span class="tag editable-slot" data-placeholder="Tinkercard"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PROJETOS -->
+    <section id="projetos">
+      <div class="section-header reveal">
+        <span class="section-tag">PORTFÓLIO - futuro</span>
+        <h2 class="section-title">Projetos em Destaque</h2>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Projeto 1 -->
+        <article class="project-card tilt-card reveal">
+          <div class="project-thumb">
+            <span class="project-number">01</span>
+          </div>
+          <div class="project-content">
+            <h3 class="editable-slot" data-placeholder=" Nome do Projeto 01"></h3>
+            <p class="editable-slot" data-placeholder="Falar do projeto"></p>
+            <div class="project-techs">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JS</span>
+            </div>
+            <div class="project-links">
+            </div>
+          </div>
+        </article>
+        </div>
+        </section>
+
+
+    <!-- 4. CONTATO -->
+    <section id="contato">
+      <div class="contact-box reveal">
+        <span class="section-tag">CONTATO</span>
+        <h2 class="section-title" style="margin-top:0.5rem;">Vamos construir algo juntos?</h2>
+        <p style="color:var(--text-muted); max-width:520px; margin:1rem auto 0;">
+          Entre em contato comigo através das plataformas abaixo.
+        </p>
+
+        <div class="contact-links">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=emilymaiara1806@gmail.com" class="contact-chip" target="_blank">Email ↗</a>
+          <a href="https://github.com/maiaraemily" class="contact-chip" target="_blank">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/emily-maiara-1b9766448/?lipi=urn%3Ali%3Apage%3Ap_mwlite_feed%3BHkz2FT6nTWOB5aZcFzGIxA%3D%3D" class="contact-chip" target="_blank">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> — Desenvolvido por <span class="editable-slot" data-placeholder="Emily Maiara"></span>.</p>
+  </footer>
+
+  <div class="toast" id="toast">E-mail copiado para a área de transferência!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
